@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #0f172a; /* لون الخلفية العام */
+    --card-bg: #1e293b; /* لون بطاقات الفريق */
+    --text-primary: #f8fafc; /* لون النصوص الأساسية */
+    --text-secondary: #94a3b8; /* لون النصوص الثانوية */
+    --accent-color: #38bdf8; /* لون الإضاءة واللمسات الجمالية */
+    --accent-glow: rgba(56, 189, 248, 0.4); /* توهج حول البطاقات */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* تنسيق قسم الترحيب */
+.hero-section {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, #020617, transparent);
+    border-bottom: 2px solid var(--card-bg);
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px var(--accent-glow);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* تنسيق حاوية الفريق (نظام الجريد لعرض 5 أعضاء بشكل متناسق) */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    flex: 1;
+}
+
+/* تنسيق بطاقة العضو */
+.team-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    width: 300px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* تأثير عند مرور الماوس (Hover Effect) - ممتاز للبرزنتيشن */
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px var(--accent-glow);
+    border-color: var(--accent-color);
+}
+
+/* تنسيق صورة العضو */
+.image-wrapper img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    padding: 4px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* تنسيق نصوص البطاقة */
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--bg-color);
+    background-color: var(--accent-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* تنسيق الفوتر */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #020617;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* التجاوب مع الشاشات الصغيرة (Responsive Design) */
+@media (max-width: 768px) {
+    .team-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
