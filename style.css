@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #0f172a; /* لون الخلفية العام */
-    --card-bg: #1e293b; /* لون بطاقات الفريق */
-    --text-primary: #f8fafc; /* لون النصوص الأساسية */
-    --text-secondary: #94a3b8; /* لون النصوص الثانوية */
-    --accent-color: #38bdf8; /* لون الإضاءة واللمسات الجمالية */
-    --accent-glow: rgba(56, 189, 248, 0.4); /* توهج حول البطاقات */
+    --bg-color: #0f172a;
+    --card-bg: #1e293b; 
+    --text-primary: #f8fafc; 
+    --text-secondary: #94a3b8; 
+    --accent-color: #38bdf8; 
+    --accent-glow: rgba(56, 189, 248, 0.4); 
 }
 
 
